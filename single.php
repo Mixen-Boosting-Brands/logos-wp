@@ -12,7 +12,7 @@
                     if (!empty($categories)) {
                         echo '<ul class="post-categories list-inline">';
                         foreach ($categories as $category) {
-                            echo '<li class="list-inline-item"><a href="' .
+                            echo '<li class="list-inline-item"><a class="badge text-bg-primary" href="' .
                                 esc_url(get_category_link($category->term_id)) .
                                 '">' .
                                 esc_html($category->name) .

@@ -33,7 +33,7 @@
                     <div class="row g-0">
                         <div class="col-4 my-auto">
                             <a href="<?php the_permalink(); ?>">
-                                <?php the_post_thumbnail("small", [
+                                <?php the_post_thumbnail("small-square", [
                                     "class" => "rounded-start img-fluid",
                                 ]); ?>
                             </a>

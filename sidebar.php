@@ -1,5 +1,7 @@
 <!-- sidebar -->
-<aside class="col-lg-3 sidebar" role="complementary">
+<aside class="col-lg-3 sidebar" role="complementary" data-aos="fade-up"
+data-aos-duration="1000"
+data-aos-delay="200">
     <h2><?php esc_html_e("Artículos relacionados", "html5blank"); ?></h2>
 
     <?php

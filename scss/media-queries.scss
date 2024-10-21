@@ -1,0 +1,39 @@
+// No media query necessary for xs breakpoint as it's effectively `@media (min-width: 0) { ... }`
+
+// Small devices (landscape phones, 576px and up)
+@include media-breakpoint-up(sm) {
+}
+
+// Medium devices (tablets, 768px and up)
+@include media-breakpoint-up(md) {
+}
+
+// Large devices (desktops, 992px and up)
+@include media-breakpoint-up(lg) {
+    #servicios {
+        .swiper-servicios {
+            padding-top: 30px;
+        }
+    }
+
+    #descanso {
+        hr {
+            margin: 1rem 0 1rem auto;
+        }
+    }
+
+    footer {
+        .social {
+            position: relative;
+            bottom: -58px;
+        }
+    }
+}
+
+// X-Large devices (large desktops, 1200px and up)
+@include media-breakpoint-up(xl) {
+}
+
+// XX-Large devices (larger desktops, 1400px and up)
+@include media-breakpoint-up(xxl) {
+}

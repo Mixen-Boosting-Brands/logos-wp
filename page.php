@@ -5,7 +5,7 @@
         <div class="row">
             <div class="col-lg-9">
                 <?php the_post_thumbnail("large", [
-                    "class" => "rounded img-fluid",
+                    "class" => "rounded img-fluid mb-4",
                 ]); ?>
                 <?php if (is_single()) {
                     $categories = get_the_category();
@@ -55,3 +55,5 @@
         </div>
     </div>
 </section>
+
+<?php get_footer(); ?>

@@ -29,7 +29,7 @@
         if ($related_query->have_posts()) {
             while ($related_query->have_posts()) {
                 $related_query->the_post(); ?>
-                <div class="card mb-3" style="max-width: 540px;">
+                <div class="card border-0 mb-3" style="max-width: 540px;">
                     <div class="row g-0">
                         <div class="col-4 my-auto">
                             <a href="<?php the_permalink(); ?>">

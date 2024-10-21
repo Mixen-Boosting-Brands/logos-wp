@@ -943,14 +943,26 @@
         </div>
         <div class="row mb-4">
             <?php
-            if (have_posts()):
-                while (have_posts()):
-                    the_post(); ?>
+            // Set up the custom query
+            $args = [
+                "post_type" => "post",
+                "posts_per_page" => 3,
+                "orderby" => "date",
+                "order" => "DESC",
+            ];
+
+            $latest_posts = new WP_Query($args);
+
+            // The Loop
+            if ($latest_posts->have_posts()):
+                $i = 1;
+                while ($latest_posts->have_posts()):
+                    $latest_posts->the_post(); ?>
                 <div
                     class="col-md-6 col-lg-4 mb-3"
                     data-aos="fade-up"
                     data-aos-duration="1000"
-                    data-aos-delay="100"
+                    data-aos-delay="<?php echo $i; ?>00"
                 >
                     <a href="<?php the_permalink(); ?>">
                         <?php the_post_thumbnail("thumb-blog", [
@@ -974,13 +986,14 @@
                         <?php the_excerpt(); ?>
                     </p>
                 </div>
-            <?php
-                endwhile; ?>
-            <?php
+                <?php
+                endwhile;
+                $i++;
             else:
-                 ?>
-            <?php
+                echo "<p>No posts found.</p>";
             endif;
+
+            // Restore original Post Data
             wp_reset_postdata();
             ?>
         </div>

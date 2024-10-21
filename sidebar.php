@@ -50,7 +50,9 @@
                                         <time datetime="<?php the_time(
                                             "Y-m-d"
                                         ); ?> <?php the_time("H:i"); ?>">
-                                            <?php the_date(); ?> <?php the_time(); ?>
+                                            <?php echo get_the_date(
+                                                "M j, Y"
+                                            ); ?>
                                         </time>
                                     </small>
                                 </p>

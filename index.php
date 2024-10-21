@@ -969,7 +969,7 @@
                             "class" => "rounded img-fluid",
                         ]); ?>
                     </a>
-                    <a href="#">
+                    <a href="<?php the_permalink(); ?>">
                         <h3 class="mt-3">
                             <?php the_title(); ?>
                             <span class="badge bg-secondary rounded-pill">

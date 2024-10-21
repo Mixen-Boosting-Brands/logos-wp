@@ -986,9 +986,8 @@
                         <?php the_excerpt(); ?>
                     </p>
                 </div>
-                <?php
+                <?php $i++;
                 endwhile;
-                $i++;
             else:
                 echo "<p>No posts found.</p>";
             endif;

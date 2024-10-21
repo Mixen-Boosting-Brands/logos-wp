@@ -34,7 +34,7 @@
                         <div class="col-4 my-auto">
                             <a href="<?php the_permalink(); ?>">
                                 <?php the_post_thumbnail("small-square", [
-                                    "class" => "rounded-start img-fluid",
+                                    "class" => "rounded img-fluid",
                                 ]); ?>
                             </a>
                         </div>

@@ -942,102 +942,47 @@
             </div>
         </div>
         <div class="row mb-4">
-            <div
-                class="col-md-6 col-lg-4 mb-3"
-                data-aos="fade-up"
-                data-aos-duration="1000"
-                data-aos-delay="100"
-            >
-                <a href="#">
-                    <img
-                        src="<?php echo esc_url(
-                            get_template_directory_uri()
-                        ); ?>/assets/images/blog/thumb-blog.png"
-                        alt=""
-                        class="rounded img-fluid"
-                        loading="lazy"
-                    />
-                </a>
-                <a href="#">
-                    <h3 class="mt-3">
-                        Encabezado
-                        <span class="badge bg-secondary rounded-pill"
-                            >Nov 20, 2024</span
-                        >
-                    </h3>
-                </a>
-                <p>
-                    Lorem ipsum dolor sit amet consectetur adipisicing
-                    elit. Vero laboriosam tempora repudiandae cupiditate
-                    temporibus aut ullam nihil necessitatibus officia
-                    nesciunt! Alias ab placeat et eum tempora, iste
-                    veniam enim obcaecati?
-                </p>
-            </div>
-            <div
-                class="col-md-6 col-lg-4 mb-3"
-                data-aos="fade-up"
-                data-aos-duration="1000"
-                data-aos-delay="200"
-            >
-                <a href="#">
-                    <img
-                        src="<?php echo esc_url(
-                            get_template_directory_uri()
-                        ); ?>/assets/images/blog/thumb-blog.png"
-                        alt=""
-                        class="rounded img-fluid"
-                        loading="lazy"
-                    />
-                </a>
-                <a href="#">
-                    <h3 class="mt-3">
-                        Encabezado
-                        <span class="badge bg-secondary rounded-pill"
-                            >Nov 20, 2024</span
-                        >
-                    </h3>
-                </a>
-                <p>
-                    Lorem ipsum dolor sit amet consectetur adipisicing
-                    elit. Vero laboriosam tempora repudiandae cupiditate
-                    temporibus aut ullam nihil necessitatibus officia
-                    nesciunt! Alias ab placeat et eum tempora, iste
-                    veniam enim obcaecati?
-                </p>
-            </div>
-            <div
-                class="col-md-6 col-lg-4 mb-3"
-                data-aos="fade-up"
-                data-aos-duration="1000"
-                data-aos-delay="300"
-            >
-                <a href="#">
-                    <img
-                        src="<?php echo esc_url(
-                            get_template_directory_uri()
-                        ); ?>/assets/images/blog/thumb-blog.png"
-                        alt=""
-                        class="rounded img-fluid"
-                        loading="lazy"
-                    />
-                </a>
-                <a href="#">
-                    <h3 class="mt-3">
-                        Encabezado
-                        <span class="badge bg-secondary rounded-pill"
-                            >Nov 20, 2024</span
-                        >
-                    </h3>
-                </a>
-                <p>
-                    Lorem ipsum dolor sit amet consectetur adipisicing
-                    elit. Vero laboriosam tempora repudiandae cupiditate
-                    temporibus aut ullam nihil necessitatibus officia
-                    nesciunt! Alias ab placeat et eum tempora, iste
-                    veniam enim obcaecati?
-                </p>
-            </div>
+            <?php
+            if (have_posts()):
+                while (have_posts()):
+                    the_post(); ?>
+                <div
+                    class="col-md-6 col-lg-4 mb-3"
+                    data-aos="fade-up"
+                    data-aos-duration="1000"
+                    data-aos-delay="100"
+                >
+                    <a href="<?php the_permalink(); ?>">
+                        <?php the_post_thumbnail("thumb-blog", [
+                            "class" => "rounded img-fluid",
+                        ]); ?>
+                    </a>
+                    <a href="#">
+                        <h3 class="mt-3">
+                            <?php the_title(); ?>
+                            <span class="badge bg-secondary rounded-pill">
+                                <time datetime="<?php the_time(
+                                    "Y-m-d"
+                                ); ?> <?php the_time("H:i"); ?>">
+                                    <?php echo get_the_date("M j, Y"); ?>
+                                </time>
+                            </span
+                            >
+                        </h3>
+                    </a>
+                    <p>
+                        <?php the_excerpt(); ?>
+                    </p>
+                </div>
+            <?php
+                endwhile; ?>
+            <?php
+            else:
+                 ?>
+            <?php
+            endif;
+            wp_reset_postdata();
+            ?>
         </div>
         <div class="row">
             <div class="col text-center">

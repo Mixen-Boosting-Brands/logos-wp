@@ -16,7 +16,10 @@
             "category__in" => $category_ids,
             "post__not_in" => [get_the_ID()],
             "posts_per_page" => 3,
-            "orderby" => "rand",
+            "orderby" => "rand", // This will randomize the posts
+            "no_found_rows" => true, // Improves performance for small queries
+            "update_post_term_cache" => false, // Improves performance
+            "update_post_meta_cache" => false, // Improves performance
         ];
 
         // The Query
@@ -28,14 +31,14 @@
                 $related_query->the_post(); ?>
                 <div class="card mb-3" style="max-width: 540px;">
                     <div class="row g-0">
-                        <div class="col-md-4">
+                        <div class="col-4 my-auto">
                             <a href="<?php the_permalink(); ?>">
                                 <?php the_post_thumbnail("small", [
                                     "class" => "rounded-start img-fluid",
                                 ]); ?>
                             </a>
                         </div>
-                        <div class="col-md-8">
+                        <div class="col-8 my-auto">
                             <div class="card-body">
                                 <a href="<?php the_permalink(); ?>">
                                     <h5 class="card-title">

@@ -55,29 +55,35 @@
                                     data-aos-delay="300"
                                 >
                                     <li>
-                                        <a class="anchor" href="<?php if (
-                                            !is_home()
-                                        ):
-                                            echo esc_url(home_url());
-                                        endif; ?>#nosotros"
+                                        <a <?php if (
+                                            is_home()
+                                        ): ?>class="anchor"<?php endif; ?> href="<?php if (
+     !is_home()
+ ):
+     echo esc_url(home_url());
+ endif; ?>#nosotros"
                                             >Historia</a
                                         >
                                     </li>
                                     <li>
-                                        <a class="anchor" href="<?php if (
-                                            !is_home()
-                                        ):
-                                            echo esc_url(home_url());
-                                        endif; ?>#testimonios"
+                                        <a <?php if (
+                                            is_home()
+                                        ): ?>class="anchor"<?php endif; ?> href="<?php if (
+     !is_home()
+ ):
+     echo esc_url(home_url());
+ endif; ?>#testimonios"
                                             >Testimoniales</a
                                         >
                                     </li>
                                     <li>
-                                        <a class="anchor" href="<?php if (
-                                            !is_home()
-                                        ):
-                                            echo esc_url(home_url());
-                                        endif; ?>#equipo"
+                                        <a <?php if (
+                                            is_home()
+                                        ): ?>class="anchor"<?php endif; ?> href="<?php if (
+     !is_home()
+ ):
+     echo esc_url(home_url());
+ endif; ?>#equipo"
                                             >Equipo</a
                                         >
                                     </li>

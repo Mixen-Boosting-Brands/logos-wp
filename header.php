@@ -70,47 +70,57 @@
                 <nav>
                     <ul id="navmenu" class="list-unstyled mb-0">
                         <li>
-                            <a class="anchor" id="btn-nav-1" href="<?php if (
-                                !is_home()
-                            ):
-                                echo esc_url(home_url());
-                            endif; ?>#nosotros"
+                            <a <?php if (
+                                is_home()
+                            ): ?>class="anchor"<?php endif; ?> id="btn-nav-1" href="<?php if (
+     !is_home()
+ ):
+     echo esc_url(home_url());
+ endif; ?>#nosotros"
                                 >Nosotros</a
                             >
                         </li>
                         <li>
-                            <a class="anchor" id="btn-nav-2" href="<?php if (
-                                !is_home()
-                            ):
-                                echo esc_url(home_url());
-                            endif; ?>#servicios"
+                            <a <?php if (
+                                is_home()
+                            ): ?>class="anchor"<?php endif; ?> id="btn-nav-2" href="<?php if (
+     !is_home()
+ ):
+     echo esc_url(home_url());
+ endif; ?>#servicios"
                                 >Servicios</a
                             >
                         </li>
                         <li>
-                            <a class="anchor" id="btn-nav-3" href="<?php if (
-                                !is_home()
-                            ):
-                                echo esc_url(home_url());
-                            endif; ?>#testimonios"
+                            <a <?php if (
+                                is_home()
+                            ): ?>class="anchor"<?php endif; ?> id="btn-nav-3" href="<?php if (
+     !is_home()
+ ):
+     echo esc_url(home_url());
+ endif; ?>#testimonios"
                                 >Testimonios</a
                             >
                         </li>
                         <li>
-                            <a class="anchor" id="btn-nav-4" href="<?php if (
-                                !is_home()
-                            ):
-                                echo esc_url(home_url());
-                            endif; ?>#equipo"
+                            <a <?php if (
+                                is_home()
+                            ): ?>class="anchor"<?php endif; ?> id="btn-nav-4" href="<?php if (
+     !is_home()
+ ):
+     echo esc_url(home_url());
+ endif; ?>#equipo"
                                 >Equipo</a
                             >
                         </li>
                         <li>
-                            <a class="anchor" id="btn-nav-5" href="<?php if (
-                                !is_home()
-                            ):
-                                echo esc_url(home_url());
-                            endif; ?>#blog"
+                            <a <?php if (
+                                is_home()
+                            ): ?>class="anchor"<?php endif; ?> id="btn-nav-5" href="<?php if (
+     !is_home()
+ ):
+     echo esc_url(home_url());
+ endif; ?>#blog"
                                 >Blog</a
                             >
                         </li>

@@ -157,7 +157,7 @@
                     <ul class="list-unstyled">
                         <li>
                             <i class="far fa-envelope"></i>
-                            <a href="mailto:">mail@logosregenerative.com</a>
+                            <a href="mailto:contacto@logosmedicalcenter.mx">contacto@logosmedicalcenter.mx</a>
                         </li>
                         <li>
                             <i class="fas fa-phone"></i>

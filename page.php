@@ -1,10 +1,10 @@
 <?php get_header(); ?>
 
-<section id="interna">
+<section id="interna" class="light">
     <div class="container">
         <div class="row">
             <div class="col-lg-9">
-                <?php the_post_thumbnail("large", [
+                <?php the_post_thumbnail("full", [
                     "class" => "rounded img-fluid mb-4",
                 ]); ?>
                 <?php if (is_single()) {

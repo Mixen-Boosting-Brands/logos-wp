@@ -531,6 +531,10 @@ header {
     }
 }
 
+#interna {
+    margin-top: 92px;
+}
+
 footer {
     @include background("../images/bg-footer.png", center, cover);
 

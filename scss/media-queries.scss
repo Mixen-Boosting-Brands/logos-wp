@@ -2,10 +2,16 @@
 
 // Small devices (landscape phones, 576px and up)
 @include media-breakpoint-up(sm) {
+    #interna {
+        margin-top: 102px;
+    }
 }
 
 // Medium devices (tablets, 768px and up)
 @include media-breakpoint-up(md) {
+    #interna {
+        margin-top: 120px;
+    }
 }
 
 // Large devices (desktops, 992px and up)

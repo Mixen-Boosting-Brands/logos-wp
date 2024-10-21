@@ -48,8 +48,6 @@
         ); ?>/assets/css/styles.css" />
 
 		<?php wp_head(); ?>
-
-
 	</head>
 	<body>
         <div id="backdrop"></div>

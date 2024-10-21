@@ -536,6 +536,15 @@ header {
     margin-bottom: 60px;
 }
 
+.interna-dark {
+    margin-top: 92px;
+
+    .titulo-pill {
+        padding-right: 1rem;
+        padding-left: 1rem;
+    }
+}
+
 footer {
     @include background("../images/bg-footer.png", center, cover);
 

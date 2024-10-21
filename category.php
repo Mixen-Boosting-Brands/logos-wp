@@ -1,6 +1,6 @@
 <?php get_header(); ?>
 
-<section id="blog" class="dark py-60">
+<section id="blog" class="dark interna-dark py-60">
     <div class="container">
         <div class="row mb-5">
             <div class="col text-center">
@@ -12,7 +12,6 @@
                 >
                     <h2>
                         <?php echo single_cat_title(); ?>
-                        Actual
                     </h2>
                 </div>
             </div>
@@ -35,7 +34,7 @@
                             "class" => "rounded img-fluid",
                         ]); ?>
                     </a>
-                    <a href="#">
+                    <a href="<?php the_permalink(); ?>">
                         <h3 class="mt-3">
                             <?php the_title(); ?>
                             <span class="badge bg-secondary rounded-pill">

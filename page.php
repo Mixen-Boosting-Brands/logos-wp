@@ -3,7 +3,9 @@
 <section id="interna" class="light">
     <div class="container">
         <div class="row">
-            <div class="<?php if( is_page(): ?>col-lg-12<?php else: ?>col-lg-9<?php endif; ?> mb-4 mb-lg-0" data-aos="fade-up"
+            <div class="<?php if (
+                is_page()
+            ): ?>col-lg-12<?php else: ?>col-lg-9<?php endif; ?> mb-4 mb-lg-0" data-aos="fade-up"
             data-aos-duration="1000"
             data-aos-delay="100">
                 <?php the_post_thumbnail("full", [
@@ -53,7 +55,7 @@
           		<?php
                 endif; ?>
             </div>
-            <?php if( is_single() ): ?>
+            <?php if (is_single()): ?>
                 <?php get_sidebar(); ?>
             <?php endif; ?>
         </div>

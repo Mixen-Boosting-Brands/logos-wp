@@ -53,7 +53,7 @@
           		<?php
                 endif; ?>
             </div>
-            <?php if( is_single(): ?>
+            <?php if( is_single() ): ?>
                 <?php get_sidebar(); ?>
             <?php endif; ?>
         </div>

@@ -8,6 +8,11 @@
             ): ?>col-lg-12<?php else: ?>col-lg-9<?php endif; ?> mb-4 mb-lg-0" data-aos="fade-up"
             data-aos-duration="1000"
             data-aos-delay="100">
+                <div class="mb-2">
+                    <?php if (function_exists("aioseo_breadcrumbs")) {
+                        aioseo_breadcrumbs();
+                    } ?>
+                </div>
                 <?php the_post_thumbnail("full", [
                     "class" => "rounded img-fluid mb-4",
                 ]); ?>

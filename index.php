@@ -321,7 +321,7 @@
     </div>
 </section>
 
-<section id="equipo" class="light py-60">
+<!-- section id="equipo" class="light py-60">
     <div class="container">
         <div class="row mb-5">
             <div class="col text-center">
@@ -426,7 +426,7 @@
             ?>
         </div>
     </div>
-</section>
+</section -->
 
 <section id="blog" class="dark py-60">
     <div class="container">

@@ -382,7 +382,7 @@
                 <div class="swiper-slide">
                     <div class="container-fluid">
                         <div class="row g-0">
-                            <div class="col-sm-6">
+                            <div class="col-lg-6">
                                 <div class="texto">
                                     <div>
                                         <h1

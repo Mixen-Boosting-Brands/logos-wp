@@ -155,7 +155,7 @@
                                     </h5>
                                     <hr />
                                     <p class="card-text">
-                                        <?php the_content(); ?>
+                                        <?php the_excerpt(); ?>
                                     </p>
                                     <a
                                         href="<?php the_permalink(); ?>"

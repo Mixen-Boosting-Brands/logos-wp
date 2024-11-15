@@ -93,6 +93,7 @@ h1 {
 }
 
 .card {
+    overflow: hidden;
     @include transition(ease, 0.3s);
 
     hr {

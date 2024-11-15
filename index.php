@@ -157,12 +157,12 @@
                                     <p class="card-text">
                                         <?php the_excerpt(); ?>
                                     </p>
-                                    <a
+                                    <!-- a
                                         href="<?php the_permalink(); ?>"
                                         class="btn btn-secondary"
                                     >Leer más
                                         <i class="fa-solid fa-circle-chevron-right"></i>
-                                    </a>
+                                    </a -->
                                 </div>
                             </div>
                         </div>
@@ -182,33 +182,7 @@
     </div>
 </section>
 
-<section class="video light py-60">
-    <div class="container">
-        <div class="row">
-            <div class="col">
-                <div
-                    class="ratio ratio-16x9"
-                    data-aos="fade-up"
-                    data-aos-duration="1000"
-                    data-aos-delay="0"
-                >
-                    <iframe
-                        width="100%"
-                        height="315"
-                        src="https://www.youtube.com/embed/LIPPmZaU_IE?si=ESKbD67LkCAcvJsD&enablejsapi=1"
-                        title="YouTube video player"
-                        frameborder="0"
-                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                        referrerpolicy="strict-origin-when-cross-origin"
-                        allowfullscreen
-                    ></iframe>
-                </div>
-            </div>
-        </div>
-    </div>
-</section>
-
-<section id="testimonios" class="dark">
+<!-- section id="testimonios" class="dark">
     <!-- Slider main container -->
     <div class="swiper swiper-testimonios">
         <!-- Additional required wrapper -->
@@ -304,7 +278,7 @@
         <div class="swiper-button-prev"></div>
         <div class="swiper-button-next"></div>
     </div>
-</section>
+</section -->
 
 <section id="descanso" class="dark">
     <div class="container-fluid">
@@ -546,7 +520,7 @@
     </div>
 </section>
 
-<section class="video light py-60">
+<!-- section class="video light py-60">
     <div class="container">
         <div class="row">
             <div class="col">
@@ -570,6 +544,6 @@
             </div>
         </div>
     </div>
-</section>
+</section -->
 
 <?php get_footer(); ?>

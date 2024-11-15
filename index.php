@@ -125,201 +125,52 @@
                 >
                     <!-- Additional required wrapper -->
                     <div class="swiper-wrapper">
+                        <?php
+                        $args = [
+                            "post_type" => "servicios",
+                            "posts_per_page" => -1,
+                        ];
+
+                        $servicios_query = new WP_Query($args);
+
+                        if ($servicios_query->have_posts()):
+                            while ($servicios_query->have_posts()):
+
+                                $servicios_query->the_post();
+                                $icono = get_field("icono");
+
+                                // Asumiendo que usas ACF para el campo personalizado
+                                ?>
                         <!-- Slides -->
                         <div class="swiper-slide">
                             <div class="card">
                                 <img
-                                    src="<?php echo esc_url(
-                                        get_template_directory_uri()
-                                    ); ?>/assets/images/servicios/ico-desgaste@2x.png"
+                                    src="<?php echo esc_url($icono); ?>"
                                     class="icon"
-                                    alt="..."
+                                    alt="<?php the_title(); ?>"
                                 />
                                 <div class="card-body">
                                     <h5 class="card-title">
-                                        Desgaste articular
+                                        <?php the_title(); ?>
                                     </h5>
                                     <hr />
                                     <p class="card-text">
-                                        El desgaste articular, también
-                                        conocido como artrosis u
-                                        osteoartritis, es un trastorno
-                                        degenerativo que afecta a las
-                                        articulaciones.
+                                        <?php the_content(); ?>
                                     </p>
                                     <a
-                                        href="#"
+                                        href="<?php the_permalink(); ?>"
                                         class="btn btn-secondary"
-                                        >Leer más
-                                        <i
-                                            class="fa-solid fa-circle-chevron-right"
-                                        ></i
-                                    ></a>
+                                    >Leer más
+                                        <i class="fa-solid fa-circle-chevron-right"></i>
+                                    </a>
                                 </div>
                             </div>
                         </div>
-                        <div class="swiper-slide">
-                            <div class="card">
-                                <img
-                                    src="<?php echo esc_url(
-                                        get_template_directory_uri()
-                                    ); ?>/assets/images/servicios/ico-lesiones@2x.png"
-                                    class="icon"
-                                    alt="..."
-                                />
-                                <div class="card-body">
-                                    <h5 class="card-title">
-                                        Lesiones musculares
-                                    </h5>
-                                    <hr />
-                                    <p class="card-text">
-                                        Las lesiones musculares y
-                                        osteotendinosas son trastornos
-                                        comunes que afectan a los
-                                        músculos, tendones y la unión
-                                        entre el hueso y el tendón.
-                                    </p>
-                                    <a
-                                        href="#"
-                                        class="btn btn-secondary"
-                                        >Leer más
-                                        <i
-                                            class="fa-solid fa-circle-chevron-right"
-                                        ></i
-                                    ></a>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="swiper-slide">
-                            <div class="card">
-                                <img
-                                    src="<?php echo esc_url(
-                                        get_template_directory_uri()
-                                    ); ?>/assets/images/servicios/ico-hernias@2x.png"
-                                    class="icon"
-                                    alt="..."
-                                />
-                                <div class="card-body">
-                                    <h5 class="card-title">
-                                        Hernias y lesiones de columna
-                                    </h5>
-                                    <hr />
-                                    <p class="card-text">
-                                        Las hernias y lesiones de
-                                        columna son afecciones que
-                                        pueden afectar severamente la
-                                        calidad de vida de las personas
-                                        debido al dolor y la limitación
-                                        funcional que producen.
-                                    </p>
-                                    <a
-                                        href="#"
-                                        class="btn btn-secondary"
-                                        >Leer más
-                                        <i
-                                            class="fa-solid fa-circle-chevron-right"
-                                        ></i
-                                    ></a>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="swiper-slide">
-                            <div class="card">
-                                <img
-                                    src="<?php echo esc_url(
-                                        get_template_directory_uri()
-                                    ); ?>/assets/images/servicios/ico-desgaste@2x.png"
-                                    class="icon"
-                                    alt="..."
-                                />
-                                <div class="card-body">
-                                    <h5 class="card-title">
-                                        Desgaste articular
-                                    </h5>
-                                    <hr />
-                                    <p class="card-text">
-                                        El desgaste articular, también
-                                        conocido como artrosis u
-                                        osteoartritis, es un trastorno
-                                        degenerativo que afecta a las
-                                        articulaciones.
-                                    </p>
-                                    <a
-                                        href="#"
-                                        class="btn btn-secondary"
-                                        >Leer más
-                                        <i
-                                            class="fa-solid fa-circle-chevron-right"
-                                        ></i
-                                    ></a>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="swiper-slide">
-                            <div class="card">
-                                <img
-                                    src="<?php echo esc_url(
-                                        get_template_directory_uri()
-                                    ); ?>/assets/images/servicios/ico-lesiones@2x.png"
-                                    class="icon"
-                                    alt="..."
-                                />
-                                <div class="card-body">
-                                    <h5 class="card-title">
-                                        Lesiones musculares
-                                    </h5>
-                                    <hr />
-                                    <p class="card-text">
-                                        Las lesiones musculares y
-                                        osteotendinosas son trastornos
-                                        comunes que afectan a los
-                                        músculos, tendones y la unión
-                                        entre el hueso y el tendón.
-                                    </p>
-                                    <a
-                                        href="#"
-                                        class="btn btn-secondary"
-                                        >Leer más
-                                        <i
-                                            class="fa-solid fa-circle-chevron-right"
-                                        ></i
-                                    ></a>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="swiper-slide">
-                            <div class="card">
-                                <img
-                                    src="<?php echo esc_url(
-                                        get_template_directory_uri()
-                                    ); ?>/assets/images/servicios/ico-hernias@2x.png"
-                                    class="icon"
-                                    alt="..."
-                                />
-                                <div class="card-body">
-                                    <h5 class="card-title">
-                                        Hernias y lesiones de columna
-                                    </h5>
-                                    <hr />
-                                    <p class="card-text">
-                                        Las hernias y lesiones de
-                                        columna son afecciones que
-                                        pueden afectar severamente la
-                                        calidad de vida de las personas
-                                        debido al dolor y la limitación
-                                        funcional que producen.
-                                    </p>
-                                    <a
-                                        href="#"
-                                        class="btn btn-secondary"
-                                        >Leer más
-                                        <i
-                                            class="fa-solid fa-circle-chevron-right"
-                                        ></i
-                                    ></a>
-                                </div>
-                            </div>
-                        </div>
+                        <?php
+                            endwhile;
+                            wp_reset_postdata();
+                        endif;
+                        ?>
                     </div>
 
                     <!-- If we need navigation buttons -->

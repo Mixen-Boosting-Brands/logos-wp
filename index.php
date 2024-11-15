@@ -561,360 +561,85 @@
             </div>
         </div>
         <div class="row">
-            <div class="col-sm-6 col-lg-4 text-center">
-                <div
-                    class="card mb-4"
-                    data-aos="fade-up"
-                    data-aos-duration="1000"
-                    data-aos-delay="200"
-                >
-                    <img
-                        src="<?php echo esc_url(
-                            get_template_directory_uri()
-                        ); ?>/assets/images/equipo/thumb-equipo.png"
-                        class="card-img-top"
-                        alt="..."
-                    />
-                    <div class="card-body text-start">
-                        <h5 class="card-title">Melchor Hervas</h5>
-                        <p class="card-text">
-                            Lorem ipsum dolor sit amet consectetur,
-                            adipisicing elit. Consequatur veritatis
-                            aspernatur tempore vitae optio reprehenderit
-                            sapiente eum cumque illo ex aliquam, tempora
-                            voluptates quod perspiciatis reiciendis
-                            iusto? Impedit, nam consequatur?
-                        </p>
-                        <ul class="social list-inline">
-                            <li class="list-inline-item">
-                                <a
-                                    href="https://www.facebook.com/"
-                                    target="_blank"
-                                >
-                                    <i
-                                        class="fa-brands fa-facebook-f"
-                                    ></i>
-                                </a>
-                            </li>
-                            <li class="list-inline-item">
-                                <a
-                                    href="https://x.com/"
-                                    target="_blank"
-                                >
-                                    <i
-                                        class="fa-brands fa-x-twitter"
-                                    ></i>
-                                </a>
-                            </li>
-                            <li class="list-inline-item">
-                                <a
-                                    href="https://linkedin.com/"
-                                    target="_blank"
-                                >
-                                    <i
-                                        class="fa-brands fa-linkedin-in"
-                                    ></i>
-                                </a>
-                            </li>
-                        </ul>
+            <?php
+            $args = [
+                "post_type" => "equipo",
+                "posts_per_page" => -1,
+                "orderby" => "date",
+                "order" => "DESC",
+            ];
+
+            $query = new WP_Query($args);
+            $delay = 200; // Valor inicial del delay
+
+            if ($query->have_posts()):
+                while ($query->have_posts()):
+
+                    $query->the_post();
+                    // Obtener el grupo de redes sociales
+                    $redes_sociales = get_field("redes_sociales");
+                    ?>
+                <div class="col-sm-6 col-lg-4 text-center">
+                    <div class="card mb-4" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="<?php echo $delay; ?>">
+                        <?php the_post_thumbnail("thumb-equipo", [
+                            "class" => "img-top img-fluid",
+                        ]); ?>
+                        <div class="card-body text-start">
+                            <h5 class="card-title"><?php the_title(); ?></h5>
+                            <p class="card-text">
+                                <?php echo get_field("resumen_descriptivo"); ?>
+                            </p>
+                            <ul class="social list-inline">
+                                <?php if ($redes_sociales["facebook"]): ?>
+                                <li class="list-inline-item">
+                                    <a href="<?php echo esc_url(
+                                        $redes_sociales["facebook"]
+                                    ); ?>" target="_blank">
+                                        <i class="fa-brands fa-facebook-f"></i>
+                                    </a>
+                                </li>
+                                <?php endif; ?>
+
+                                <?php if ($redes_sociales["x"]): ?>
+                                <li class="list-inline-item">
+                                    <a href="<?php echo esc_url(
+                                        $redes_sociales["x"]
+                                    ); ?>" target="_blank">
+                                        <i class="fa-brands fa-x-twitter"></i>
+                                    </a>
+                                </li>
+                                <?php endif; ?>
+
+                                <?php if ($redes_sociales["linkedin"]): ?>
+                                <li class="list-inline-item">
+                                    <a href="<?php echo esc_url(
+                                        $redes_sociales["linkedin"]
+                                    ); ?>" target="_blank">
+                                        <i class="fa-brands fa-linkedin-in"></i>
+                                    </a>
+                                </li>
+                                <?php endif; ?>
+
+                                <?php if ($redes_sociales["whatsapp"]): ?>
+                                <li class="list-inline-item">
+                                    <a href="<?php echo esc_url(
+                                        $redes_sociales["whatsapp"]
+                                    ); ?>" target="_blank">
+                                        <i class="fa-brands fa-whatsapp"></i>
+                                    </a>
+                                </li>
+                                <?php endif; ?>
+                            </ul>
+                        </div>
                     </div>
                 </div>
-            </div>
-            <div class="col-sm-6 col-lg-4 text-center">
-                <div
-                    class="card mb-4"
-                    data-aos="fade-up"
-                    data-aos-duration="1000"
-                    data-aos-delay="300"
-                >
-                    <img
-                        src="<?php echo esc_url(
-                            get_template_directory_uri()
-                        ); ?>/assets/images/equipo/thumb-equipo.png"
-                        class="card-img-top"
-                        alt="..."
-                    />
-                    <div class="card-body text-start">
-                        <h5 class="card-title">Melchor Hervas</h5>
-                        <p class="card-text">
-                            Lorem ipsum dolor sit amet consectetur,
-                            adipisicing elit. Consequatur veritatis
-                            aspernatur tempore vitae optio reprehenderit
-                            sapiente eum cumque illo ex aliquam, tempora
-                            voluptates quod perspiciatis reiciendis
-                            iusto? Impedit, nam consequatur?
-                        </p>
-                        <ul class="social list-inline">
-                            <li class="list-inline-item">
-                                <a
-                                    href="https://www.facebook.com/"
-                                    target="_blank"
-                                >
-                                    <i
-                                        class="fa-brands fa-facebook-f"
-                                    ></i>
-                                </a>
-                            </li>
-                            <li class="list-inline-item">
-                                <a
-                                    href="https://x.com/"
-                                    target="_blank"
-                                >
-                                    <i
-                                        class="fa-brands fa-x-twitter"
-                                    ></i>
-                                </a>
-                            </li>
-                            <li class="list-inline-item">
-                                <a
-                                    href="https://linkedin.com/"
-                                    target="_blank"
-                                >
-                                    <i
-                                        class="fa-brands fa-linkedin-in"
-                                    ></i>
-                                </a>
-                            </li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
-            <div class="col-sm-6 col-lg-4 text-center">
-                <div
-                    class="card mb-4"
-                    data-aos="fade-up"
-                    data-aos-duration="1000"
-                    data-aos-delay="400"
-                >
-                    <img
-                        src="<?php echo esc_url(
-                            get_template_directory_uri()
-                        ); ?>/assets/images/equipo/thumb-equipo.png"
-                        class="card-img-top"
-                        alt="..."
-                    />
-                    <div class="card-body text-start">
-                        <h5 class="card-title">Melchor Hervas</h5>
-                        <p class="card-text">
-                            Lorem ipsum dolor sit amet consectetur,
-                            adipisicing elit. Consequatur veritatis
-                            aspernatur tempore vitae optio reprehenderit
-                            sapiente eum cumque illo ex aliquam, tempora
-                            voluptates quod perspiciatis reiciendis
-                            iusto? Impedit, nam consequatur?
-                        </p>
-                        <ul class="social list-inline">
-                            <li class="list-inline-item">
-                                <a
-                                    href="https://www.facebook.com/"
-                                    target="_blank"
-                                >
-                                    <i
-                                        class="fa-brands fa-facebook-f"
-                                    ></i>
-                                </a>
-                            </li>
-                            <li class="list-inline-item">
-                                <a
-                                    href="https://x.com/"
-                                    target="_blank"
-                                >
-                                    <i
-                                        class="fa-brands fa-x-twitter"
-                                    ></i>
-                                </a>
-                            </li>
-                            <li class="list-inline-item">
-                                <a
-                                    href="https://linkedin.com/"
-                                    target="_blank"
-                                >
-                                    <i
-                                        class="fa-brands fa-linkedin-in"
-                                    ></i>
-                                </a>
-                            </li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
-            <div class="col-sm-6 col-lg-4 text-center">
-                <div
-                    class="card mb-4"
-                    data-aos="fade-up"
-                    data-aos-duration="1000"
-                    data-aos-delay="500"
-                >
-                    <img
-                        src="<?php echo esc_url(
-                            get_template_directory_uri()
-                        ); ?>/assets/images/equipo/thumb-equipo.png"
-                        class="card-img-top"
-                        alt="..."
-                    />
-                    <div class="card-body text-start">
-                        <h5 class="card-title">Melchor Hervas</h5>
-                        <p class="card-text">
-                            Lorem ipsum dolor sit amet consectetur,
-                            adipisicing elit. Consequatur veritatis
-                            aspernatur tempore vitae optio reprehenderit
-                            sapiente eum cumque illo ex aliquam, tempora
-                            voluptates quod perspiciatis reiciendis
-                            iusto? Impedit, nam consequatur?
-                        </p>
-                        <ul class="social list-inline">
-                            <li class="list-inline-item">
-                                <a
-                                    href="https://www.facebook.com/"
-                                    target="_blank"
-                                >
-                                    <i
-                                        class="fa-brands fa-facebook-f"
-                                    ></i>
-                                </a>
-                            </li>
-                            <li class="list-inline-item">
-                                <a
-                                    href="https://x.com/"
-                                    target="_blank"
-                                >
-                                    <i
-                                        class="fa-brands fa-x-twitter"
-                                    ></i>
-                                </a>
-                            </li>
-                            <li class="list-inline-item">
-                                <a
-                                    href="https://linkedin.com/"
-                                    target="_blank"
-                                >
-                                    <i
-                                        class="fa-brands fa-linkedin-in"
-                                    ></i>
-                                </a>
-                            </li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
-            <div class="col-sm-6 col-lg-4 text-center">
-                <div
-                    class="card mb-4"
-                    data-aos="fade-up"
-                    data-aos-duration="1000"
-                    data-aos-delay="600"
-                >
-                    <img
-                        src="<?php echo esc_url(
-                            get_template_directory_uri()
-                        ); ?>/assets/images/equipo/thumb-equipo.png"
-                        class="card-img-top"
-                        alt="..."
-                    />
-                    <div class="card-body text-start">
-                        <h5 class="card-title">Melchor Hervas</h5>
-                        <p class="card-text">
-                            Lorem ipsum dolor sit amet consectetur,
-                            adipisicing elit. Consequatur veritatis
-                            aspernatur tempore vitae optio reprehenderit
-                            sapiente eum cumque illo ex aliquam, tempora
-                            voluptates quod perspiciatis reiciendis
-                            iusto? Impedit, nam consequatur?
-                        </p>
-                        <ul class="social list-inline">
-                            <li class="list-inline-item">
-                                <a
-                                    href="https://www.facebook.com/"
-                                    target="_blank"
-                                >
-                                    <i
-                                        class="fa-brands fa-facebook-f"
-                                    ></i>
-                                </a>
-                            </li>
-                            <li class="list-inline-item">
-                                <a
-                                    href="https://x.com/"
-                                    target="_blank"
-                                >
-                                    <i
-                                        class="fa-brands fa-x-twitter"
-                                    ></i>
-                                </a>
-                            </li>
-                            <li class="list-inline-item">
-                                <a
-                                    href="https://linkedin.com/"
-                                    target="_blank"
-                                >
-                                    <i
-                                        class="fa-brands fa-linkedin-in"
-                                    ></i>
-                                </a>
-                            </li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
-            <div class="col-sm-6 col-lg-4 text-center">
-                <div
-                    class="card mb-4"
-                    data-aos="fade-up"
-                    data-aos-duration="1000"
-                    data-aos-delay="700"
-                >
-                    <img
-                        src="<?php echo esc_url(
-                            get_template_directory_uri()
-                        ); ?>/assets/images/equipo/thumb-equipo.png"
-                        class="card-img-top"
-                        alt="..."
-                    />
-                    <div class="card-body text-start">
-                        <h5 class="card-title">Melchor Hervas</h5>
-                        <p class="card-text">
-                            Lorem ipsum dolor sit amet consectetur,
-                            adipisicing elit. Consequatur veritatis
-                            aspernatur tempore vitae optio reprehenderit
-                            sapiente eum cumque illo ex aliquam, tempora
-                            voluptates quod perspiciatis reiciendis
-                            iusto? Impedit, nam consequatur?
-                        </p>
-                        <ul class="social list-inline">
-                            <li class="list-inline-item">
-                                <a
-                                    href="https://www.facebook.com/"
-                                    target="_blank"
-                                >
-                                    <i
-                                        class="fa-brands fa-facebook-f"
-                                    ></i>
-                                </a>
-                            </li>
-                            <li class="list-inline-item">
-                                <a
-                                    href="https://x.com/"
-                                    target="_blank"
-                                >
-                                    <i
-                                        class="fa-brands fa-x-twitter"
-                                    ></i>
-                                </a>
-                            </li>
-                            <li class="list-inline-item">
-                                <a
-                                    href="https://linkedin.com/"
-                                    target="_blank"
-                                >
-                                    <i
-                                        class="fa-brands fa-linkedin-in"
-                                    ></i>
-                                </a>
-                            </li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
+            <?php $delay += 100; // Incrementar el delay en 100 para el siguiente elemento
+                endwhile;
+                wp_reset_postdata();
+            else:
+                echo "No se encontraron miembros del equipo.";
+            endif;
+            ?>
         </div>
     </div>
 </section>

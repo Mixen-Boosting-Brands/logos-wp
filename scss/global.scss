@@ -259,7 +259,13 @@ header {
     }
 
     .texto {
-        @include background("../images/bg-nosotros.png", right, cover);
+        // @include background("../images/bg-nosotros.png", right, cover);
+        background: rgb(15, 111, 108);
+        background: linear-gradient(
+            180deg,
+            $gradient-light 0%,
+            $gradient-dark 50%
+        );
         display: flex;
         justify-content: center;
         align-items: center;

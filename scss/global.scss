@@ -486,11 +486,13 @@ header {
 }
 
 #blog {
-    @include background("../images/bg-blog.png", left bottom, cover);
+    // @include background("../images/bg-blog.png", left bottom, cover);
+    background: $gradient-light;
+    background: linear-gradient(260deg, $gradient-light 0%, $gradient-dark 80%);
 
     .titulo-pill {
         .badge {
-            color: $primary;
+            color: $gradient-dark;
         }
     }
 
@@ -557,7 +559,9 @@ header {
 }
 
 footer {
-    @include background("../images/bg-footer.png", center, cover);
+    // @include background("../images/bg-footer.png", center, cover);
+    background: $gradient-light;
+    background: linear-gradient(180deg, $gradient-light 0%, $gradient-dark 50%);
 
     a {
         &:hover,

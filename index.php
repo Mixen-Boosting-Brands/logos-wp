@@ -362,130 +362,89 @@
     <div class="swiper swiper-testimonios">
         <!-- Additional required wrapper -->
         <div class="swiper-wrapper">
-            <!-- Slides -->
-            <div class="swiper-slide">
-                <div class="container-fluid">
-                    <div class="row g-0">
-                        <div class="col-sm-6">
-                            <div class="texto">
-                                <div>
-                                    <h1
-                                        class="mb-4"
-                                        data-aos="fade-up"
-                                        data-aos-duration="1000"
-                                        data-aos-delay="0"
-                                    >
-                                        Testimonio
-                                        <span>María</span>
-                                    </h1>
-                                    <p
-                                        class="mb-4"
-                                        data-aos="fade-up"
-                                        data-aos-duration="1000"
-                                        data-aos-delay="200"
-                                    >
-                                        Haz clic en el botón de play y
-                                        descubre cómo a María le cambió
-                                        la vida nuestro tratamiento para
-                                        su desgaste articular.
-                                    </p>
-                                    <img
-                                        src="<?php echo esc_url(
-                                            get_template_directory_uri()
-                                        ); ?>/assets/images/logo-footer@2x.png"
-                                        alt=""
-                                        class="logo img-fluid"
-                                        data-aos="fade-up"
-                                        data-aos-duration="1000"
-                                        data-aos-delay="300"
-                                    />
+            <?php
+            $testimonios_query = new WP_Query([
+                "post_type" => "testimonios",
+                "posts_per_page" => -1, // No limit
+                "orderby" => "date",
+                "order" => "DESC",
+            ]);
+
+            if ($testimonios_query->have_posts()):
+                while ($testimonios_query->have_posts()):
+
+                    $testimonios_query->the_post();
+                    $video_id = get_field("video_id");
+
+                    // Assuming you're using ACF, if not, use get_post_meta()
+                    ?>
+                <!-- Slides -->
+                <div class="swiper-slide">
+                    <div class="container-fluid">
+                        <div class="row g-0">
+                            <div class="col-sm-6">
+                                <div class="texto">
+                                    <div>
+                                        <h1
+                                            class="mb-4"
+                                            data-aos="fade-up"
+                                            data-aos-duration="1000"
+                                            data-aos-delay="0"
+                                        >
+                                            Testimonio
+                                            <span><?php echo get_the_title(); ?></span>
+                                        </h1>
+                                        <p
+                                            class="mb-4"
+                                            data-aos="fade-up"
+                                            data-aos-duration="1000"
+                                            data-aos-delay="200"
+                                        >
+                                            Haz clic en el botón de play y
+                                            descubre cómo a <?php echo get_the_title(); ?> le cambió
+                                            la vida nuestro tratamiento para
+                                            su desgaste articular.
+                                        </p>
+                                        <img
+                                            src="<?php echo esc_url(
+                                                get_template_directory_uri()
+                                            ); ?>/assets/images/logo-footer@2x.png"
+                                            alt=""
+                                            class="logo img-fluid"
+                                            data-aos="fade-up"
+                                            data-aos-duration="1000"
+                                            data-aos-delay="300"
+                                        />
+                                    </div>
                                 </div>
                             </div>
-                        </div>
-                        <div class="col-lg-6">
-                            <div class="image-container">
-                                <a
-                                    href="javascript:void(0)"
-                                    data-bs-toggle="modal"
-                                    data-bs-target="#modal-testimonios"
-                                    data-bs-nombre="María"
-                                    data-bs-youtube-video="LIPPmZaU_IE"
-                                >
-                                    <img
-                                        src="<?php echo esc_url(
-                                            get_template_directory_uri()
-                                        ); ?>/assets/images/testimonios/thumb-testimonio.png"
-                                        alt=""
-                                        class="full-size-image"
-                                    />
-                                </a>
+                            <div class="col-lg-6">
+                                <div class="image-container">
+                                    <a
+                                        href="javascript:void(0)"
+                                        data-bs-toggle="modal"
+                                        data-bs-target="#modal-testimonios"
+                                        data-bs-nombre="<?php echo esc_attr(
+                                            get_the_title()
+                                        ); ?>"
+                                        data-bs-youtube-video="<?php echo esc_attr(
+                                            $video_id
+                                        ); ?>"
+                                    >
+                                        <?php the_post_thumbnail("full", [
+                                            "class" => "full-size-image",
+                                        ]); ?>
+                                    </a>
+                                </div>
                             </div>
                         </div>
                     </div>
                 </div>
-            </div>
-            <div class="swiper-slide">
-                <div class="container-fluid">
-                    <div class="row g-0">
-                        <div class="col-sm-6">
-                            <div class="texto">
-                                <div>
-                                    <h1
-                                        class="mb-4"
-                                        data-aos="fade-up"
-                                        data-aos-duration="1000"
-                                        data-aos-delay="0"
-                                    >
-                                        Testimonio
-                                        <span>Guadalupe</span>
-                                    </h1>
-                                    <p
-                                        class="mb-4"
-                                        data-aos="fade-up"
-                                        data-aos-duration="1000"
-                                        data-aos-delay="200"
-                                    >
-                                        Haz clic en el botón de play y
-                                        descubre cómo a Guadalupe le
-                                        cambió la vida nuestro
-                                        tratamiento para su desgaste
-                                        articular.
-                                    </p>
-                                    <img
-                                        src="<?php echo esc_url(
-                                            get_template_directory_uri()
-                                        ); ?>/assets/images/logo-footer@2x.png"
-                                        alt=""
-                                        class="logo img-fluid"
-                                        data-aos="fade-up"
-                                        data-aos-duration="1000"
-                                        data-aos-delay="300"
-                                    />
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-lg-6">
-                            <div class="image-container">
-                                <a
-                                    href="javascript:void(0)"
-                                    data-bs-toggle="modal"
-                                    data-bs-target="#modal-testimonios"
-                                    data-bs-nombre="Guadalupe"
-                                    data-bs-youtube-video="LIPPmZaU_IE"
-                                >
-                                    <img
-                                        src="<?php echo esc_url(
-                                            get_template_directory_uri()
-                                        ); ?>/assets/images/testimonios/thumb-testimonio.png"
-                                        alt=""
-                                        class="full-size-image"
-                                    />
-                                </a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
+            <?php
+                endwhile;
+                wp_reset_postdata();
+            endif;
+            ?>
         </div>
         <!-- If we need pagination -->
         <div class="swiper-pagination"></div>
@@ -643,8 +602,6 @@
         </div>
     </div>
 </section>
-
-<section id="testimonios"></section>
 
 <section id="blog" class="dark py-60">
     <div class="container">

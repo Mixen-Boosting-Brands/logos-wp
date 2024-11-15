@@ -428,7 +428,7 @@
     </div>
 </section -->
 
-<section id="blog" class="dark py-60">
+<!-- section id="blog" class="dark py-60">
     <div class="container">
         <div class="row mb-5">
             <div class="col text-center">
@@ -518,7 +518,7 @@
             </div>
         </div>
     </div>
-</section>
+</section -->
 
 <!-- section class="video light py-60">
     <div class="container">

@@ -405,7 +405,7 @@ header {
 }
 
 #descanso {
-    background-color: #4180f3;
+    background-color: $info;
 
     .decor {
         @include background("../images/decor-descanso.png", center, cover);

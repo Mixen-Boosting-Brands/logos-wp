@@ -283,10 +283,10 @@
 <section id="descanso" class="dark">
     <div class="container-fluid">
         <div class="row g-0">
-            <div class="col-lg-4">
+            <div class="col-lg-5">
                 <div class="decor"></div>
             </div>
-            <div class="col-lg-8">
+            <div class="col-lg-7">
                 <div class="texto text-lg-end">
                     <div>
                         <h1

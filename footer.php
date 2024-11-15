@@ -1,13 +1,5 @@
         <section id="mapa">
-            <iframe
-                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3500.493826283401!2d-106.08256642287847!3d28.674870975641756!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x86ea4376f60fc76b%3A0xab78fb18d989c09!2sParque%20de%20Innovaci%C3%B3n%20y%20Transferencia%20de%20Tecnolog%C3%ADa%2C%20Av.%20H.%20Colegio%20Militar%203700%2C%20Arcadias%2C%2031300%20Chihuahua%2C%20Chih.!5e0!3m2!1ses-419!2smx!4v1729182775467!5m2!1ses-419!2smx"
-                width="100%"
-                height="450"
-                style="border: 0"
-                allowfullscreen=""
-                loading="lazy"
-                referrerpolicy="no-referrer-when-downgrade"
-            ></iframe>
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3502.13734797472!2d-106.12065332483257!3d28.62564538439394!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x86ea5d2cbe655555%3A0x956ae202ea60c312!2sSierra%20Alta%20Medical%20City!5e0!3m2!1ses-419!2smx!4v1731699002652!5m2!1ses-419!2smx" width="100%" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
         </section>
 
         <footer class="dark py-60">

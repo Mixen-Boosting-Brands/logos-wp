@@ -36,7 +36,10 @@ if (isset($_POST["nombre"])) {
 
     try {
         //Recipients
-        $mail->setFrom("noreply@jits.com.mx", "Correo noreply@jits.com.mx");
+        $mail->setFrom(
+            "noreply@logosmedicalcenter.mx",
+            "Correo noreply@logosmedicalcenter.mx"
+        );
         $mail->addAddress("luis.pando@mixen.mx"); //Add a recipient
         // $mail->addAddress('info@grupogeg.com');     //Add extra recipient
         $mail->addReplyTo($email, "Deseo obtener más información.");

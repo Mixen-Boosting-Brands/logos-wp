@@ -21,17 +21,30 @@
                                     data-aos-duration="1000"
                                     data-aos-delay="100"
                                 >
+                                    <?php
+                                    $args = [
+                                        "post_type" => "servicios",
+                                        "posts_per_page" => -1,
+                                    ];
+
+                                    $servicios_query = new WP_Query($args);
+
+                                    if ($servicios_query->have_posts()):
+                                        while ($servicios_query->have_posts()):
+
+                                            $servicios_query->the_post();
+                                            $icono = get_field("icono");
+
+                                            // Asumiendo que usas ACF para el campo personalizado
+                                            ?>
                                     <li>
-                                        <a href="#">Desgaste articular</a>
+                                        <a href="<?php the_permalink(); ?>"><?php the_title(); ?></a>
                                     </li>
-                                    <li>
-                                        <a href="#">Lesiones musculares</a>
-                                    </li>
-                                    <li>
-                                        <a href="#"
-                                            >Hernias y lesiones de columna</a
-                                        >
-                                    </li>
+                                    <?php
+                                        endwhile;
+                                        wp_reset_postdata();
+                                    endif;
+                                    ?>
                                 </ul>
                                 <h1
                                     data-aos="fade-up"
@@ -124,15 +137,34 @@
                                     data-aos-duration="1000"
                                     data-aos-delay="700"
                                 >
+                                    <?php
+                                    // Set up the custom query
+                                    $args = [
+                                        "post_type" => "post",
+                                        "posts_per_page" => 3,
+                                        "orderby" => "date",
+                                        "order" => "DESC",
+                                    ];
+
+                                    $latest_posts = new WP_Query($args);
+
+                                    // The Loop
+                                    if ($latest_posts->have_posts()):
+                                        $i = 1;
+                                        while ($latest_posts->have_posts()):
+                                            $latest_posts->the_post(); ?>
                                     <li>
-                                        <a href="#">Artículo 1</a>
+                                        <a href="<?php the_permalink(); ?>"><?php the_title(); ?></a>
                                     </li>
-                                    <li>
-                                        <a href="#">Artículo 2</a>
-                                    </li>
-                                    <li>
-                                        <a href="#">Artículo 3</a>
-                                    </li>
+                                    <?php
+                                        endwhile;
+                                    else:
+                                        echo "<p>No se encontraron posts.</p>";
+                                    endif;
+
+                                    // Restore original Post Data
+                                    wp_reset_postdata();
+                                    ?>
                                 </ul>
                             </div>
                         </div>

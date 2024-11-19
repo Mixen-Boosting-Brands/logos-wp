@@ -172,7 +172,7 @@
                 </div>
                 <div class="row mb-4 mb-lg-0">
                     <div class="col text-center">
-                        <ul
+                        <!-- ul
                             class="social list-inline"
                             data-aos="fade-up"
                             data-aos-duration="1000"
@@ -195,16 +195,11 @@
                                 </a>
                             </li>
                             <li class="list-inline-item">
-                                <a href="https://x.com/" target="_blank">
-                                    <i class="fa-brands fa-x-twitter"></i>
-                                </a>
-                            </li>
-                            <li class="list-inline-item">
                                 <a href="https://linkedin.com/" target="_blank">
                                     <i class="fa-brands fa-linkedin-in"></i>
                                 </a>
                             </li>
-                        </ul>
+                        </ul -->
                     </div>
                 </div>
                 <div class="row mb-5">

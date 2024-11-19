@@ -146,7 +146,7 @@
                     data-bs-target="#modal-contacto"
                     >Contáctanos</a
                 >
-                <div id="social">
+                <!-- div id="social">
                     <ul class="social list-inline">
                         <li class="list-inline-item">
                             <a href="https://www.facebook.com/" target="_blank">
@@ -162,17 +162,12 @@
                             </a>
                         </li>
                         <li class="list-inline-item">
-                            <a href="https://x.com/" target="_blank">
-                                <i class="fa-brands fa-x-twitter"></i>
-                            </a>
-                        </li>
-                        <li class="list-inline-item">
                             <a href="https://linkedin.com/" target="_blank">
                                 <i class="fa-brands fa-linkedin-in"></i>
                             </a>
                         </li>
                     </ul>
-                </div>
+                </div -->
                 <div id="contacto-menu">
                     <ul class="list-unstyled">
                         <li>

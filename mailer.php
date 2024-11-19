@@ -40,7 +40,7 @@ if (isset($_POST["nombre"])) {
             "noreply@logosmedicalcenter.mx",
             "Correo noreply@logosmedicalcenter.mx"
         );
-        $mail->addAddress("luis.pando@mixen.mx"); //Add a recipient
+        $mail->addAddress("contacto@logosmedicalcenter.mx"); //Add a recipient
         // $mail->addAddress('info@grupogeg.com');     //Add extra recipient
         $mail->addReplyTo($email, "Deseo obtener más información.");
 

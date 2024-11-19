@@ -21,8 +21,8 @@ $mail->CharSet = "UTF-8";
 $mail->isSMTP(); //Send using SMTP
 $mail->Host = "smtp.hostinger.com"; //Set the SMTP server to send through
 $mail->SMTPAuth = true; //Enable SMTP authentication
-$mail->Username = "noreply@jits.com.mx"; //SMTP username
-$mail->Password = "mK8LaD_UMUF_"; //SMTP password
+$mail->Username = "noreply@logosmedicalcenter.mx"; //SMTP username
+$mail->Password = "GTjq-P3Qpe8b"; //SMTP password
 $mail->SMTPSecure = PHPMailer::ENCRYPTION_STARTTLS; //Enable TLS encryption; `PHPMailer::ENCRYPTION_SMTPS` encouraged
 $mail->Port = 587;
 // $mail->SMTPDebug = 1;
@@ -37,7 +37,7 @@ if (isset($_POST["nombre"])) {
     try {
         //Recipients
         $mail->setFrom("noreply@jits.com.mx", "Correo noreply@jits.com.mx");
-        $mail->addAddress("contacto@jits.com.mx"); //Add a recipient
+        $mail->addAddress("luis.pando@mixen.mx"); //Add a recipient
         // $mail->addAddress('info@grupogeg.com');     //Add extra recipient
         $mail->addReplyTo($email, "Deseo obtener más información.");
 
@@ -53,7 +53,7 @@ if (isset($_POST["nombre"])) {
             $phone .
             "<br>Mensaje:<br>" .
             $message .
-            "<br><br>Este mensaje fue enviado a través del formulario de contacto en el sitio web de JITS.";
+            "<br><br>Este mensaje fue enviado a través del formulario de contacto en el sitio web de Logos Regenerative Medical Center.";
 
         $mail->send();
         echo "Gracias por contactarnos, nos pondremos en contacto contigo a la brevedad.";

@@ -70,7 +70,7 @@
                                             >Historia</a
                                         >
                                     </li>
-                                    <li>
+                                    <!-- li>
                                         <a <?php if (
                                             is_home()
                                         ): ?>class="anchor"<?php endif; ?> href="<?php if (
@@ -91,7 +91,7 @@
  endif; ?>#equipo"
                                             >Equipo</a
                                         >
-                                    </li>
+                                    </li -->
                                 </ul>
                             </div>
                             <div class="col-6">
@@ -120,9 +120,9 @@
                                     <li>
                                         <a href="mailto:contacto@logosmedicalcenter.mx">Email</a>
                                     </li>
-                                    <li>
+                                    <!-- li>
                                         <a href="#">Chat en vivo</a>
-                                    </li>
+                                    </li -->
                                 </ul>
                                 <h1
                                     data-aos="fade-up"

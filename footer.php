@@ -250,7 +250,7 @@
         </footer>
 
         <a
-            href="https://wa.me/526143739566?text=Qué tal%20Logos Regenerative Medical Center,%20necesito%20información."
+            href="https://wa.me/526141608641?text=Qué tal%20Logos Regenerative Medical Center,%20necesito%20información."
             class="whatsapp"
             target="_blank"
         >

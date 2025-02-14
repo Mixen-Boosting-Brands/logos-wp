@@ -31,7 +31,7 @@
                     frente a los métodos tradicionales.
                 </p>
                 <a
-                    href="#nosotros"
+                    href="#formulario"
                     class="btn btn-secondary btn-lg"
                     data-aos="fade-up"
                     data-aos-duration="1000"
@@ -184,10 +184,36 @@
 
 <section id="formulario" class="py-60">
     <div class="container">
+        <div class="row mb-5">
+            <div class="col text-center">
+                <h1
+                    class="mb-0"
+                    data-aos="fade-up"
+                    data-aos-duration="1000"
+                    data-aos-delay="0"
+                >
+                    Agenda tu cita
+                </h1>
+                <h2
+                    class="headline"
+                    data-aos="fade-up"
+                    data-aos-duration="1000"
+                    data-aos-delay="100"
+                >
+                    Reserva hoy tu cita con nosotros pagando la mitad del importe total de la consulta.
+                </h2>
+            </div>
+        </div>
         <div class="row">
             <div class="col-12">
-                <script src="https://js.hsforms.net/forms/embed/48724822.js" defer></script>
-                <div class="hs-form-frame" data-region="na1" data-form-id="2a30f9c9-355d-46f5-933d-cd49991234d3" data-portal-id="48724822"></div>
+                <div
+                    data-aos="fade-up"
+                    data-aos-duration="1000"
+                    data-aos-delay="200"
+                >
+                    <script src="https://js.hsforms.net/forms/embed/48724822.js" defer></script>
+                    <div class="hs-form-frame" data-region="na1" data-form-id="2a30f9c9-355d-46f5-933d-cd49991234d3" data-portal-id="48724822"></div>
+                </div>
             </div>
         </div>
     </div>

@@ -184,7 +184,7 @@
 
 <section id="formulario" class="py-60">
     <div class="container">
-        <div class="row mb-5">
+        <div class="row">
             <div class="col text-center">
                 <h1
                     class="mb-0"

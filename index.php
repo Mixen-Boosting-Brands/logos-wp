@@ -182,6 +182,17 @@
     </div>
 </section>
 
+<section id="formulario" class="py-60">
+    <div class="container">
+        <div class="row">
+            <div class="col-12">
+                <script src="https://js.hsforms.net/forms/embed/48724822.js" defer></script>
+                <div class="hs-form-frame" data-region="na1" data-form-id="2a30f9c9-355d-46f5-933d-cd49991234d3" data-portal-id="48724822"></div>
+            </div>
+        </div>
+    </div>
+</section>
+
 <!-- section id="testimonios" class="dark">
     <!-- Slider main container -->
     <div class="swiper swiper-testimonios">

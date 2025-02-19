@@ -223,7 +223,9 @@
                 </div>
                 <div class="row">
                     <div class="col text-center text-lg-start">
-                        <p>
+                        <p data-aos="fade-in"
+                        data-aos-duration="1000"
+                        data-aos-delay="1000">
                             <a
                                 href="<?php echo get_permalink(3); ?>"
                             >
@@ -233,7 +235,7 @@
                         <p
                             data-aos="fade-in"
                             data-aos-duration="1000"
-                            data-aos-delay="1000"
+                            data-aos-delay="1100"
                         >
                             &copy; <?php echo date("Y"); ?> <?php bloginfo(
      "name"
@@ -244,7 +246,7 @@
                             class="mb-0"
                             data-aos="fade-in"
                             data-aos-duration="1000"
-                            data-aos-delay="1000"
+                            data-aos-delay="1200"
                             data-aos-offset="0"
                         >
                             Made with <i class="fa-solid fa-heart"></i> by

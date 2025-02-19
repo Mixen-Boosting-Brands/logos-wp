@@ -223,6 +223,13 @@
                 </div>
                 <div class="row">
                     <div class="col text-center text-lg-start">
+                        <p>
+                            <a
+                                href="<?php echo get_permalink(3); ?>"
+                            >
+                                <?php echo get_the_title(3); ?>
+                            </a>
+                        </p>
                         <p
                             data-aos="fade-in"
                             data-aos-duration="1000"

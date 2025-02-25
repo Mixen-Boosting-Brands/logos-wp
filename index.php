@@ -37,7 +37,7 @@
                     data-aos-duration="1000"
                     data-aos-delay="300"
                 >
-                    Ver más
+                    Agenda tu consulta
                     <i class="fa-solid fa-circle-chevron-right"></i>
                 </a>
             </div>

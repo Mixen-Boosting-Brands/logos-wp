@@ -249,7 +249,7 @@
                             data-aos-delay="1200"
                             data-aos-offset="0"
                         >
-                            Made with <i class="fa-solid fa-heart"></i> by
+                            Hecho por
                             <a href="https://mixen.mx/" target="_blank">Mixen</a
                             >.
                         </p>

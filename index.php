@@ -557,7 +557,7 @@
     </div>
 </section -->
 
-<!-- section class="video light py-60">
+<section class="video light py-60">
     <div class="container">
         <div class="row">
             <div class="col">
@@ -567,20 +567,11 @@
                     data-aos-duration="1000"
                     data-aos-delay="0"
                 >
-                    <iframe
-                        width="100%"
-                        height="315"
-                        src="https://www.youtube.com/embed/LIPPmZaU_IE?si=ESKbD67LkCAcvJsD&enablejsapi=1"
-                        title="YouTube video player"
-                        frameborder="0"
-                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                        referrerpolicy="strict-origin-when-cross-origin"
-                        allowfullscreen
-                    ></iframe>
+                    <iframe width="100%" height="315" src="https://www.youtube.com/embed/i6XMHAXZB2Y?si=LBhrVV_CcwIOtG9v" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
                 </div>
             </div>
         </div>
     </div>
-</section -->
+</section>
 
 <?php get_footer(); ?>

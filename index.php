@@ -253,9 +253,17 @@
                                             data-aos-duration="1000"
                                             data-aos-delay="0"
                                         >
-                                            Testimonio
+                                            Testimonial
                                             <span><?php echo get_the_title(); ?></span>
                                         </h1>
+                                        <p
+                                            class="mb-4"
+                                            data-aos="fade-up"
+                                            data-aos-duration="1000"
+                                            data-aos-delay="200"
+                                        >
+                                            Haz clic en el botón de play para ver el testimonial de <?php echo get_the_title(); ?>.
+                                        </p>
                                         <img
                                             src="<?php echo esc_url(
                                                 get_template_directory_uri()

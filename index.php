@@ -219,7 +219,7 @@
     </div>
 </section>
 
-<!-- section id="testimonios" class="dark">
+<section id="testimonios" class="dark">
     <!-- Slider main container -->
     <div class="swiper swiper-testimonios">
         <!-- Additional required wrapper -->
@@ -315,7 +315,7 @@
         <div class="swiper-button-prev"></div>
         <div class="swiper-button-next"></div>
     </div>
-</section -->
+</section>
 
 <section id="descanso" class="dark">
     <div class="container-fluid">

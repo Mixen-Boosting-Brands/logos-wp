@@ -256,17 +256,6 @@
                                             Testimonio
                                             <span><?php echo get_the_title(); ?></span>
                                         </h1>
-                                        <p
-                                            class="mb-4"
-                                            data-aos="fade-up"
-                                            data-aos-duration="1000"
-                                            data-aos-delay="200"
-                                        >
-                                            Haz clic en el botón de play y
-                                            descubre cómo a <?php echo get_the_title(); ?> le cambió
-                                            la vida nuestro tratamiento para
-                                            su desgaste articular.
-                                        </p>
                                         <img
                                             src="<?php echo esc_url(
                                                 get_template_directory_uri()

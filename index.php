@@ -138,6 +138,14 @@
 
                                 $servicios_query->the_post();
                                 $icono = get_field("icono");
+                                $pagina_servicio_id = get_field(
+                                    "pagina_de_servicio"
+                                ); // Get the linked page ID
+                                $pagina_servicio_url = $pagina_servicio_id
+                                    ? get_permalink($pagina_servicio_id)
+                                    : "";
+
+                                // Get the URL
 
                                 // Asumiendo que usas ACF para el campo personalizado
                                 ?>
@@ -157,16 +165,6 @@
                                     <p class="card-text">
                                         <?php the_excerpt(); ?>
                                     </p>
-                                    <?php
-                                    $pagina_servicio_id = get_field(
-                                        "pagina_de_servicio"
-                                    ); // Get the linked page ID
-                                    $pagina_servicio_url = $pagina_servicio_id
-                                        ? get_permalink($pagina_servicio_id)
-                                        : "";
-
-                                // Get the URL
-                                ?>
                                     <a
                                         href="<?php echo esc_url(
                                             $pagina_servicio_url

@@ -157,12 +157,24 @@
                                     <p class="card-text">
                                         <?php the_excerpt(); ?>
                                     </p>
-                                    <!-- a
-                                        href="<?php the_permalink(); ?>"
+                                    <?php
+                                    $pagina_servicio_id = get_field(
+                                        "pagina_de_servicio"
+                                    ); // Get the linked page ID
+                                    $pagina_servicio_url = $pagina_servicio_id
+                                        ? get_permalink($pagina_servicio_id)
+                                        : "";
+
+                                // Get the URL
+                                ?>
+                                    <a
+                                        href="<?php echo esc_url(
+                                            $pagina_servicio_url
+                                        ); ?>"
                                         class="btn btn-secondary"
-                                    >Leer más
+                                    >Ver más
                                         <i class="fa-solid fa-circle-chevron-right"></i>
-                                    </a -->
+                                    </a>
                                 </div>
                             </div>
                         </div>

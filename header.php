@@ -114,7 +114,7 @@
                                 >Testimonios</a
                             >
                         </li>
-                        <li>
+                        <!-- li>
                             <a <?php if (
                                 is_home()
                             ): ?>class="anchor"<?php endif; ?> id="btn-nav-4" href="<?php if (
@@ -135,7 +135,7 @@
  endif; ?>#blog"
                                 >Blog</a
                             >
-                        </li>
+                        </li -->
                     </ul>
                 </nav>
                 <a

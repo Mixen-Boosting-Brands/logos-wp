@@ -117,12 +117,7 @@
         <div class="row">
             <div class="col text-center">
                 <!-- Slider main container -->
-                <div
-                    class="swiper swiper-servicios"
-                    data-aos="fade-up"
-                    data-aos-duration="1000"
-                    data-aos-delay="200"
-                >
+                <div class="swiper swiper-servicios" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="200">
                     <!-- Additional required wrapper -->
                     <div class="swiper-wrapper">
                         <?php
@@ -139,49 +134,43 @@
                                 $servicios_query->the_post();
                                 $icono = get_field("icono");
 
-                                // Asumiendo que usas ACF para el campo personalizado
-                                ?>
-                        <!-- Slides -->
-                        <div class="swiper-slide">
-                            <div class="card">
-                                <img
-                                    src="<?php echo esc_url($icono); ?>"
-                                    class="icon"
-                                    alt="<?php the_title(); ?>"
-                                />
-                                <div class="card-body">
-                                    <h5 class="card-title">
-                                        <?php the_title(); ?>
-                                    </h5>
-                                    <hr />
-                                    <p class="card-text">
-                                        <?php the_excerpt(); ?>
-                                    </p>
-                                    <a
-                                        href="<?php
-                                        $pagina_servicio = get_field(
-                                            "pagina_de_servicio"
-                                        );
-                                        $pagina_servicio_url = "";
+                                // Get service page URL
+                                $pagina_servicio = get_field(
+                                    "pagina_de_servicio"
+                                );
+                                $pagina_servicio_url = "";
 
-                                        if (
-                                            $pagina_servicio &&
-                                            is_array($pagina_servicio)
-                                        ) {
-                                            // Get the first ID from the array
-                                            $page_id = $pagina_servicio[0];
-                                            $pagina_servicio_url = get_permalink(
-                                                $page_id
-                                            );
-                                        }
-                                        ?>"
-                                        class="btn btn-secondary"
-                                    >Ver más
-                                        <i class="fa-solid fa-circle-chevron-right"></i>
-                                    </a>
+                                if (
+                                    $pagina_servicio &&
+                                    is_array($pagina_servicio)
+                                ) {
+                                    $page_id = $pagina_servicio[0];
+                                    $pagina_servicio_url = get_permalink(
+                                        $page_id
+                                    );
+                                }
+                                ?>
+
+                                <!-- Slides -->
+                                <div class="swiper-slide">
+                                    <div class="card">
+                                        <img src="<?php echo esc_url(
+                                            $icono
+                                        ); ?>" class="icon" alt="<?php echo esc_attr(
+    get_the_title()
+); ?>" />
+                                        <div class="card-body">
+                                            <h5 class="card-title"><?php the_title(); ?></h5>
+                                            <hr />
+                                            <p class="card-text"><?php the_excerpt(); ?></p>
+                                            <a href="<?php echo esc_url(
+                                                $pagina_servicio_url
+                                            ); ?>" class="btn btn-secondary">
+                                                Ver más <i class="fa-solid fa-circle-chevron-right"></i>
+                                            </a>
+                                        </div>
+                                    </div>
                                 </div>
-                            </div>
-                        </div>
                         <?php
                             endwhile;
                             wp_reset_postdata();

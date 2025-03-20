@@ -222,7 +222,7 @@
                     </div>
                 </div>
                 <div class="row">
-                    <div class="col-lg-6 my-auto text-center text-lg-start">
+                    <div class="col-lg-6 mb-4 my-lg-auto text-center text-lg-start">
                         <p data-aos="fade-in"
                         data-aos-duration="1000"
                         data-aos-delay="1000">

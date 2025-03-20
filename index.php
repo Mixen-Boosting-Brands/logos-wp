@@ -139,45 +139,6 @@
                                 $servicios_query->the_post();
                                 $icono = get_field("icono");
 
-                                $pagina_servicio = get_field(
-                                    "pagina_de_servicio"
-                                );
-
-                                var_dump($pagina_servicio);
-                                if ($pagina_servicio) {
-                                    // If it's an object
-                                    if (is_object($pagina_servicio)) {
-                                        $pagina_servicio_url = get_permalink(
-                                            $pagina_servicio->ID
-                                        );
-                                    }
-                                    // If it's an array
-                                    elseif (is_array($pagina_servicio)) {
-                                        // If it's a single-value relationship field
-                                        if (isset($pagina_servicio["ID"])) {
-                                            $pagina_servicio_url = get_permalink(
-                                                $pagina_servicio["ID"]
-                                            );
-                                        }
-                                        // If it's a multi-value relationship field
-                                        elseif (!empty($pagina_servicio[0])) {
-                                            $pagina_servicio_url = get_permalink(
-                                                $pagina_servicio[0]->ID
-                                            );
-                                        }
-                                    }
-                                    // If it's just an ID
-                                    else {
-                                        $pagina_servicio_url = get_permalink(
-                                            $pagina_servicio
-                                        );
-                                    }
-                                } else {
-                                    $pagina_servicio_url = "";
-                                }
-
-                                // Get the URL
-
                                 // Asumiendo que usas ACF para el campo personalizado
                                 ?>
                         <!-- Slides -->
@@ -197,9 +158,23 @@
                                         <?php the_excerpt(); ?>
                                     </p>
                                     <a
-                                        href="<?php echo esc_url(
-                                            $pagina_servicio_url
-                                        ); ?>"
+                                        href="<?php
+                                        $pagina_servicio = get_field(
+                                            "pagina_de_servicio"
+                                        );
+                                        $pagina_servicio_url = "";
+
+                                        if (
+                                            $pagina_servicio &&
+                                            is_array($pagina_servicio)
+                                        ) {
+                                            // Get the first ID from the array
+                                            $page_id = $pagina_servicio[0];
+                                            $pagina_servicio_url = get_permalink(
+                                                $page_id
+                                            );
+                                        }
+                                        ?>"
                                         class="btn btn-secondary"
                                     >Ver más
                                         <i class="fa-solid fa-circle-chevron-right"></i>
